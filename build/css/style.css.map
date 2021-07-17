@@ -1,0 +1,1 @@
+{"version":3,"sources":["main.less"],"names":[],"mappings":"AAKA,EACI,OAAA,EACA,QAAA,EACA,WAAA","file":"style.css","sourcesContent":["@primary_bg_color: #EBEBEB;\r\n@secondary_bg_color: #3157BE;\r\n@butt_color: #3157BE;\r\n@butt_color_hover: #3968E8;\r\n\r\n*{\r\n    margin: 0;\r\n    padding: 0;\r\n    box-sizing: border-box;\r\n}"]}
