@@ -1,0 +1,1 @@
+let e=document.querySelector("div.top-info__burger-wrapper > div.menu__item.lang"),t=document.querySelector("body > div > header > div > div.top-info__burger-wrapper > div.menu__item.lang > div");e.addEventListener("touchstart",e=>{t.classList.toggle("menu__item-extended-active")});

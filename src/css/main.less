@@ -2,6 +2,8 @@
 @secondary_bg_color: #3157BE;
 @butt_color        : #3157BE;
 @butt_color_hover  : #3968E8;
+@screen-tablet     : 1025px;
+@screen-mob        : 500px;
 
 @font-face {
     font-family: 'Gill Sans';
@@ -69,6 +71,10 @@ h3 {
         margin-right: 10px;
     }
 
+    & &__burger-wrapper {
+        display: none;
+    }
+
     &__logo img {
         width: 215px;
     }
@@ -124,6 +130,95 @@ h3 {
             & :hover {
                 background-color: darken(@butt_color, 10%);
             }
+        }
+    }
+
+    @media (max-width: @screen-tablet) {
+
+        & &__contacts,
+        & &__schedule {
+            display: none;
+        }
+
+        & &__burger-wrapper {
+            display    : flex;
+            align-items: center;
+        }
+
+        & &__burger-wrapper .lang {
+            display    : flex;
+            align-items: center;
+            position   : relative;
+        }
+
+        & &__burger-wrapper .menu__item-extended {
+            display: none;
+        }
+
+        & &__burger-wrapper .menu__item-extended-active {
+            position        : absolute;
+            top             : 25px;
+            display         : flex;
+            flex-direction  : column;
+            z-index         : 5;
+            background-color: #fff;
+            padding         : 10px;
+            margin-left     : -10px;
+            border-radius   : 15px;
+            display         : flex;
+        }
+
+        & &__burger-wrapper .menu__item-extended a {
+            color          : #000;
+            text-decoration: none;
+            margin         : 5px 0;
+        }
+
+        & &__burger-wrapper .lang span {
+            border-bottom: 2px solid #000;
+            width        : 8px;
+            height       : 8px;
+            display      : flex;
+            margin-left  : 10px;
+            border-left  : 2px solid #000;
+            transform    : rotate(-45deg);
+            transition   : .3s;
+        }
+
+        & .burger-wrapper__burger {
+            display         : flex;
+            width           : 44px;
+            height          : 44px;
+            background-color: @butt_color;
+            border-radius   : 50%;
+            align-items     : center;
+            justify-content : center;
+            flex-direction  : column;
+
+            span {
+                margin          : 2px;
+                display         : flex;
+                width           : 18px;
+                height          : 3px;
+                background-color: #fff;
+                border-radius   : 20px;
+            }
+        }
+
+    }
+
+    @media (max-width: @screen-mob) {
+        & {
+            justify-content: space-between;
+            margin         : 0 40px;
+        }
+
+        &>&__call {
+            display: none;
+        }
+
+        & &__burger-wrapper {
+            align-items: flex-end;
         }
     }
 }
@@ -252,6 +347,12 @@ nav {
                 }
             }
 
+        }
+    }
+
+    @media (max-width: @screen-tablet) {
+        & {
+            display: none;
         }
     }
 }
